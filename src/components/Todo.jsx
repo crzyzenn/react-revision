@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import { uuid } from "uuidv4";
+import TodoCard from "./TodoCard/Index";
+
+// 1. Display todos
+// 2. Mark todos
+// 3. Delete todos
 
 export default function Todo() {
   // Format
@@ -21,10 +26,10 @@ export default function Todo() {
     };
     // setTodos(todos.push(taskToAdd));
     setTodos([...todos, taskToAdd]);
-    console.log("Form Submitted", taskToAdd);
   };
 
   console.log(todos);
+
   return (
     <div>
       <h1>New Todo</h1>
@@ -41,6 +46,13 @@ export default function Todo() {
           placeholder="Enter your todo"
         />
       </form>
+
+      {/* Todos */}
+      <div>
+        <h1>My Todos</h1>
+        {/* Display todos */}
+        <TodoCard />
+      </div>
     </div>
   );
 }
