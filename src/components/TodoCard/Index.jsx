@@ -3,12 +3,18 @@ import "./todocard.css";
 import CheckIcon from "@material-ui/icons/Check";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-export default function TodoCard() {
+export default function TodoCard({ id, name, onCheckClick, completed }) {
   return (
     <div className="todocard--container">
-      <h3>Name of the task</h3>
+      <h3>{name}</h3>
+      {completed ? "Completed" : "Not Completed"}
+
       <div className="todocard--buttons">
-        <button>
+        <button
+          onClick={() => {
+            onCheckClick(id);
+          }}
+        >
           <CheckIcon />
         </button>
         <button>
