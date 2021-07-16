@@ -61,7 +61,7 @@ export default function Todo() {
         const taskToAdd = {
           id: uuid(),
           name: inputValue,
-          completed: false
+          completed: false,
         };
         // setTodos(todos.push(taskToAdd));
         setTodos([...todos, taskToAdd]);
@@ -94,7 +94,7 @@ export default function Todo() {
       if (todo.id === id) {
         return {
           ...todo,
-          completed: true
+          completed: true,
         };
       } else {
         return todo;
@@ -143,7 +143,7 @@ export default function Todo() {
       if (todo.id === id) {
         return {
           ...todo,
-          completed: false
+          completed: false,
         };
       } else {
         return todo;
@@ -160,7 +160,7 @@ export default function Todo() {
         <input
           style={{
             width: "70%",
-            height: 30
+            height: 30,
           }}
           type="text"
           onChange={(e) => {
@@ -177,7 +177,7 @@ export default function Todo() {
         style={{
           display: "flex",
           gap: 10,
-          flexWrap: "wrap"
+          flexWrap: "wrap",
         }}
       >
         {/* Display todos */}
@@ -199,7 +199,7 @@ export default function Todo() {
         style={{
           display: "flex",
           gap: 10,
-          flexWrap: "wrap"
+          flexWrap: "wrap",
         }}
       >
         {/* Display todos */}
